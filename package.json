@@ -1,0 +1,29 @@
+{
+  "name": "projetokaos",
+  "version": "1.0.0",
+  "description": "Projeto KAOS",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "projeto",
+    "kaos",
+    "electron"
+  ],
+  "author": "Vinicius Duarte",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^1.8.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9"
+  },
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/vinidg/login-electron.git"
+  }
+
+}
