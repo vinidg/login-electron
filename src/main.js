@@ -12,7 +12,7 @@ app.on('ready', function() {
     //Criar janela
     mainWindow = new BrowserWindow({});
     mainWindow.loadURL(url.format({
-        pathname: path.join(__dirname, '/login/login.html'),
+        pathname: path.join(__dirname, '/login.html'),
         protocol: 'file',
         slashes: true
     }));
@@ -30,7 +30,7 @@ function createAddWindow() {
         title: 'Adicionar lista'
     });
     addWindow.loadURL(url.format({
-        pathname: path.join(__dirname, '/login/login.html'),
+        pathname: path.join(__dirname, '/login.html'),
         protocol: 'file',
         slashes: true
     }));
