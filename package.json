@@ -4,7 +4,10 @@
   "description": "Projeto KAOS",
   "main": "src/main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build-electron": "npm run dist",
+    "pack": "build --dir",
+    "dist": "build"
   },
   "keywords": [
     "projeto",
@@ -14,16 +17,20 @@
   "author": "Vinicius Duarte",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^1.8.2"
+    "electron": "^1.8.2",
+    "electron-builder": "^20.2.1"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
     "jquery": "^3.3.1",
+    "npm": "^5.7.1",
     "popper.js": "^1.12.9"
   },
-  "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/vinidg/login-electron.git"
-  }
-
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vinidg/login-electron.git"
+  },
+  "win": {
+   "target": "NSIS"
+}
 }

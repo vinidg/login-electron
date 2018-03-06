@@ -1,0 +1,9 @@
+version: 1.0.0
+files:
+  - url: projetokaos-setup-1.0.0.exe
+    sha512: eLlmCkDapQK9M1Slwlf7wFExZhLTpOZnfJFmJBcSEWA771Z9GqG1Y3FfprV77CSAzRv2QHYqet4suc0dIYdYnQ==
+    size: 41045658
+path: projetokaos-setup-1.0.0.exe
+sha512: eLlmCkDapQK9M1Slwlf7wFExZhLTpOZnfJFmJBcSEWA771Z9GqG1Y3FfprV77CSAzRv2QHYqet4suc0dIYdYnQ==
+sha2: 3f2c2429f359f26f8f0e1530544f4c99cdd611c55cdda096cd4f99864bc289be
+releaseDate: '2018-03-06T02:16:59.668Z'
