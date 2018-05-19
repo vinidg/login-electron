@@ -6,11 +6,6 @@
                 </link>
             </meta>
         </meta>
-        <script>
-            window.onload = function(){
-                checkCookie();
-            }
-        </script>
     </head>
     <body>
         <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
@@ -37,9 +32,46 @@
         </div>
         <div class="container">
             <div class="col px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-                <h1>
-                    Seja bem vindo !!!
-                </h1>
+                    <% if(validacao.length > 0) { %>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="alert alert-danger">
+                                    <strong>Atenção!</strong>
+                                    <ul>
+                                        <% for(var i = 0; i < validacao.length; i++) { %>
+                                            <li><%= validacao[i].msg %></li>
+                                        <% } %>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                <form action="/autenticar" method="post">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">
+                            Email
+                        </label>
+                        <input aria-describedby="emailHelp" class="form-control" id="inputEmail" name="email" placeholder="Email" type="email">
+                        </input>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">
+                            Senha
+                        </label>
+                        <input class="form-control" id="inputSenha" name="senha" placeholder="Senha" type="password">
+                        </input>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" id="exampleCheck1" type="checkbox">
+                            <label class="form-check-label" for="exampleCheck1">
+                                Mantenha conectado
+                            </label>
+                        </input>
+                    </div>
+                    <button class="btn btn-primary" id="entrar" type="submit">
+                        Entrar
+                    </button>
+                </form>
             </div>
         </div>
     </body>
@@ -48,7 +80,5 @@
     <script crossorigin="anonymous" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
     </script>
     <script crossorigin="anonymous" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
-    </script>
-    <script src="../js/Login.js" type="text/javascript">
     </script>
 </html>
