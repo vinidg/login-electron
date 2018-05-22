@@ -1,6 +1,7 @@
 const electron = require('electron');
 const url = require('url');
 const path = require('path');
+var url = 'http://localhost:3000/';
 const {
     app,
     BrowserWindow,
@@ -11,11 +12,7 @@ let addWindow;
 app.on('ready', function() {
     //Criar janela
     mainWindow = new BrowserWindow({});
-    mainWindow.loadURL(url.format({
-        pathname: path.join(__dirname, '/login.html'),
-        protocol: 'file',
-        slashes: true
-    }));
+    mainWindow.loadURL(url);
     //Build Menu
     const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
     //Inserir menu
@@ -29,11 +26,7 @@ function createAddWindow() {
         height: 300,
         title: 'Adicionar lista'
     });
-    addWindow.loadURL(url.format({
-        pathname: path.join(__dirname, '/login.html'),
-        protocol: 'file',
-        slashes: true
-    }));
+    addWindow.loadURL(url);
     //Build Menu
     const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
     //Inserir menu
