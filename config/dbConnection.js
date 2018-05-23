@@ -1,10 +1,12 @@
 var mysql = require('mysql');
+var host = "172.17.0.2";
+var pass = "123456"
 
 var connMySQL = function(){
 	return mysql.createConnection({
-		host : 'localhost',
+		host : host,
 		user : 'root',
-		password : '123456',
+		password : pass,
 		database : 'kaos'
 	});
 }

@@ -33,7 +33,7 @@ module.exports.autenticar = function(application, req, res){
         if(req.session.autorizado){
             res.redirect('home');
         }else{
-            let erro = [{msg: 'Erro na validação do usuário e senha'}];
+            var erro = [{msg: 'Erro na validação do usuário e senha'}];
             console.log(erro[0].msg)
             res.render('login', {validacao:erro});
         }
