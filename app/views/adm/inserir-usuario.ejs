@@ -1,0 +1,48 @@
+<%- contentFor('body') %>
+<% if(validacao.length > 0) { %>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-danger">
+                <strong>Atenção!</strong>
+                <ul>
+                    <% for(var i = 0; i < validacao.length; i++) { %>
+                        <li><%= validacao[i].msg %></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+<% } %>
+<form action="/adm/inserir-usuario" method="post">
+<div class="form-group">
+    <label for="exampleInputNome1">
+        Nome
+    </label>
+    <input aria-describedby="nomeHelp" class="form-control" id="inputNome" name="nome" placeholder="Nome" type="text">
+    </input>
+</div>
+<div class="form-group">
+    <label for="exampleInputEmail1">
+        Email
+    </label>
+    <input aria-describedby="emailHelp" class="form-control" id="inputEmail" name="email" placeholder="Email" type="email">
+    </input>
+</div>
+<div class="form-group">
+    <label for="exampleInputPassword1">
+        Senha
+    </label>
+    <input class="form-control" id="inputSenha" name="senha" placeholder="Senha" type="password">
+    </input>
+</div>
+<div class="form-group">
+    <label for="exampleInputPassword1">
+        Repita Senha
+    </label>
+    <input class="form-control" id="inputSenha" name="senha" placeholder="Senha" type="password">
+    </input>
+</div>
+<button class="btn btn-primary rigth-text" id="entrar" type="submit">
+    Adicionar
+</button>
+</form>
